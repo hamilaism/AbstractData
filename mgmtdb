@@ -1,0 +1,166 @@
+{
+  "ingredients": [
+    {
+      "id": "ingr001",
+      "name": "Framboise",
+      "brand": "BioBerry",
+      "category": "Épicerie fraîche",
+      "weight_volume": "500g",
+      "ABV": "0%",
+      "shelf_life": "7 jours",
+      "price": "5€",
+      "price_evolution": "5€ -> 4.8€",
+      "supplier": "Fermier Dupont",
+      "stock_added": "10",
+      "comments": "A stocker au frais"
+    },
+    {
+      "id": "ingr002",
+      "name": "Alcool pur",
+      "brand": "Distillateur National",
+      "category": "Liquide",
+      "weight_volume": "1L",
+      "ABV": "96%",
+      "shelf_life": "Indéfinie",
+      "price": "20€",
+      "price_evolution": "20€ stable",
+      "supplier": "Distillerie Nationale",
+      "stock_added": "5",
+      "comments": "À utiliser dans les distillations"
+    },
+    {
+      "id": "ingr003",
+      "name": "Citron",
+      "brand": "LemonFarm",
+      "category": "Épicerie fraîche",
+      "weight_volume": "1kg",
+      "ABV": "0%",
+      "shelf_life": "5 jours",
+      "price": "3€",
+      "price_evolution": "3€ -> 2.9€",
+      "supplier": "Agriculteur Lemon",
+      "stock_added": "7",
+      "comments": "Utilisé pour les cocktails acidulés"
+    }
+  ],
+  "distillation": {
+    "collections": [
+      {
+        "id": "collection001",
+        "name": "Monochrome",
+        "description": "Distillats monochromes",
+        "color_code": "Rouge",
+        "distillations": [
+          {
+            "id": "distill001",
+            "name": "Distillat Framboise",
+            "ingredients": [
+              { "ingredient_id": "ingr001", "quantity": "500g" },
+              { "ingredient_id": "ingr002", "quantity": "200ml" }
+            ],
+            "batch_calculator": "500g Framboise pour 200ml Alcool",
+            "method": [
+              "1. Extraction des framboises",
+              "2. Distillation lente à 38°C, 30 Mbar"
+            ],
+            "packaging": "Bouteille 500ml",
+            "shelf_life": "6 mois",
+            "allergen": "Framboise",
+            "comments": "Bien refermer après utilisation"
+          }
+        ]
+      },
+      {
+        "id": "collection002",
+        "name": "Distillates",
+        "description": "Collection de distillations",
+        "color_code": "Jaune",
+        "distillations": [
+          {
+            "id": "distill002",
+            "name": "Distillat Citron",
+            "ingredients": [
+              { "ingredient_id": "ingr003", "quantity": "300g" },
+              { "ingredient_id": "ingr002", "quantity": "150ml" }
+            ],
+            "batch_calculator": "300g Citron pour 150ml Alcool",
+            "method": [
+              "1. Préparation des citrons",
+              "2. Distillation lente à 40°C"
+            ],
+            "packaging": "Bouteille 750ml",
+            "shelf_life": "3 mois",
+            "allergen": "Citron",
+            "comments": "Conserver au frais"
+          }
+        ]
+      }
+    ]
+  },
+  "cookbook": {
+    "menus": [
+      {
+        "id": "menu001",
+        "name": "Abstract Menu",
+        "description": "Cocktails à la carte",
+        "color_code": "Rouge",
+        "cocktails": [
+          {
+            "id": "cocktail001",
+            "name": "Negroni",
+            "ingredients": [
+              { "ingredient_id": "ingr001", "quantity": "30ml" },
+              { "ingredient_id": "ingr002", "quantity": "30ml" },
+              { "ingredient_id": "ingr003", "quantity": "30ml" }
+            ],
+            "batch_calculator": "1:1:1 ratio pour Gin, Campari, Vermouth",
+            "method": [
+              "1. Mélanger tous les ingrédients avec de la glace",
+              "2. Servir avec un zeste d'orange"
+            ],
+            "packaging": "Bouteille 500ml",
+            "shelf_life": "1 mois",
+            "service": {
+              "glass": "Verre bas",
+              "ice": "Gros glaçons",
+              "ritual": "Zeste d'orange"
+            },
+            "allergen": "None",
+            "comments": "Cocktail classique italien"
+          }
+        ]
+      },
+      {
+        "id": "menu002",
+        "name": "Drinks Bible",
+        "description": "Recettes pour consulting et événements",
+        "color_code": "Bleu",
+        "cocktails": [
+          {
+            "id": "cocktail002",
+            "name": "Margarita",
+            "ingredients": [
+              { "ingredient_id": "ingr002", "quantity": "50ml" },
+              { "ingredient_id": "ingr003", "quantity": "20ml" },
+              { "ingredient_id": "ingr001", "quantity": "10ml" }
+            ],
+            "batch_calculator": "5:2:1 ratio pour Tequila, Citron, Sirop",
+            "method": [
+              "1. Shaker tous les ingrédients",
+              "2. Servir dans un verre avec du sel sur le bord"
+            ],
+            "packaging": "Bouteille 750ml",
+            "shelf_life": "2 semaines",
+            "service": {
+              "glass": "Verre à cocktail",
+              "ice": "Sans glace",
+              "ritual": "Sel sur le bord du verre"
+            },
+            "allergen": "Citron",
+            "comments": "Cocktail rafraîchissant"
+          }
+        ]
+      }
+    ]
+  }
+}
